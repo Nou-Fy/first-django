@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bonjour</title>
+    <link href="{% static 'Style.css' %}" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="container">
+    <div class="form-floating">
+        <textarea class="form-control" id="nomTextarea" placeholder="{{nom}}"></textarea>
+        <label for="nomTextarea">Welcome: {{nom}}</label>
+    </div>
+    <div class="form-floating">
+        <textarea class="form-control" id="ageTextarea" placeholder="{{age}}"></textarea>
+        <label for="ageTextarea"> Votre age: {{age}}
+        </label>
+    </div>
+    <div class="form-floating">
+        <textarea class="form-control" id="tailleTextarea" placeholder="{{taille}}"></textarea>
+        <label for="tailleTextarea"> avec une Taille de: {{taille}}
+        </label>
+    </div>
+    <div class="form-floating">
+        <textarea class="form-control" id="genreTextarea" placeholder="{{genre}}"></textarea>
+        <label for="genreTextarea"> Vous être un(e): {{genre}}
+        </label>
+    </div>
+</div>
+</body>
+</html>

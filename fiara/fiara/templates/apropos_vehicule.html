@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Profil Véhicule</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">IMMATRICULATION</th>
+                    <th scope="col">MARQUE</th>
+                    <th scope="col">IMAGE</th>
+                    <th scope="col">ACTIONS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>AB123CD</td>
+                    <td>Marque 1</td>
+                    <td><img src="path_to_image_1.jpg" alt="Image 1"></td>
+                    <td>
+                        <button class="btn btn-primary" onclick="activerModifications()">Modifier</button>
+                        <button class="btn btn-danger" onclick="supprimerDonnees()">Supprimer</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>EF456GH</td>
+                    <td>Marque 2</td>
+                    <td><img src="path_to_image_2.jpg" alt="Image 2"></td>
+                    <td>
+                        <button class="btn btn-primary" onclick="activerModifications()">Modifier</button>
+                        <button class="btn btn-danger" onclick="supprimerDonnees()">Supprimer</button>
+                    </td>
+                </tr>
+                <!-- Ajoutez d'autres lignes pour plus de véhicules -->
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

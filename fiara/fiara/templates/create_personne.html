@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription Proprietaire</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    {% load widget_tweaks %}
+</head>
+<body>
+<form action="/inscritpion/" class="container mt-2" method="post" style="width: 200px;">
+    {% csrf_token %}
+    <fieldset>
+        {% for field in form %}
+        {{ field.label }}
+        {% render_field field class="form-control" %}
+        {% endfor %}
+        <div>
+            <input class="btn btn-primary" type="submit" value="INSCRIPTION">
+        </div>
+    </fieldset>
+    <!--    <div class="container">-->
+    <!--        <div class="mb-3">-->
+    <!--            <label class="form-label" for="exampleInputId">Nom</label>-->
+    <!--            <input aria-describedby="emailHelp" class="form-control" id="exampleInputId" type="texte">-->
+    <!--        </div>-->
+    <!--        <div class="mb-3">-->
+    <!--            <label class="form-label" for="exampleInputPrenom">Prenom</label>-->
+    <!--            <input class="form-control" id="exampleInputPrenom" type="texte">-->
+    <!--        </div>-->
+    <!--        <div class="mb-3">-->
+    <!--            <label class="form-label" for="exampleInputage">Age</label>-->
+    <!--            <input class="form-control" id="exampleInputage" type="number">-->
+    <!--        </div>-->
+    <!--        <div class="mb-3">-->
+    <!--            <label class="form-label" for="exampleInputgenre">Genre</label>-->
+    <!--            <input class="form-control" id="exampleInputgenre" type="texte">-->
+    <!--        </div>-->
+    <!--        <div>-->
+    <!--            <a class="btn btn-primary" href="http://127.0.0.1:8000/personnes/ajout/">Crée Un Profile</a>-->
+    <!--        </div>-->
+    <!--    </div>-->
+
+
+</form>
+<div>
+    <h1>
+        Liste des personnes :
+    </h1>
+    {% for olona in personne %}
+    <div>
+        <p> nom : {{olona.nom}}  prenom : {{olona.prenom}}</p>
+        <p> age : {{olona.age}} genre : {{olona.genre}}</p>
+        <a class="btn btn-secondary" href="/personne/supprimer/{{olona.id}}">Supprimer</a>
+
+    </div>
+    {% endfor %}
+</div>
+</body>
+</html>
